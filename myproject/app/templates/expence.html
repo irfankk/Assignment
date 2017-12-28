@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Expenditre</title>
+
+    
+  
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+ <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Expenditure</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+            <a class="nav-link" href="/expence">Add Expence <span class="sr-only">(current)</span></a>
+          </li>
+         <li class="nav-item active">
+            <a class="nav-link" href="/addcat">Add Category<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Daily View</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="#">Monthly View</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Yearly View</a>
+          </li> 
+        </ul>
+        
+          
+		  
+          <a class="btn btn-outline-success my-2 my-sm-0" href="/login" role="button">Logout</a>
+		 
+        
+      </div>
+    </nav>
+	<div class= container>
+	<br>
+<br><br><br>
+
+<div class="row">
+<div class="col-lg-5">
+            <h2>Add Your Expance</h2>
+            <form class="form-signin" method="POST" action="/expence">
+<br>
+        
+<input type="String" class="form-control disabled" placeholder="" name="name"  value = "name" required="" autofocus=""> 
+<br> 
+<select type="number" class="form-control" name="day">
+
+<option>Day</option>
+{% for i in range(1, 32)%}
+
+                                                
+												<option value="{{ i }}">{{ i }}</option>
+												{% endfor %}
+												
+                                            </select>
+											<br>
+<select class="form-control" name="month">
+                                                <option>Month</option>
+												<option value="Januvary">Januvary</option>
+                                                <option value="Februvary">Februvary</option>
+                                                <option value="March">March</option>
+                                                <option value="April">April</option>
+                                                <option value="May">May</option>
+												<option value="June">June</option>
+												<option value="July">July</option>
+												<option value="August">August</option>
+												<option value="September">September</option>
+												<option value="October">October</option>
+												<option value="November">November</option>
+												<option value="December">December</option>
+												</select>
+												
+											<br>
+<select id="disabledSelect" class="form-control" name="year">
+                                                    <option>Year</option>
+                                                </select>
+											
+       
+											<br>
+<select class="form-control" name="cat" >
+                                                <option>Category</option>
+												{% for mat in catone %}
+												<option>{{ mat}}</option>
+                                                
+												{% endfor %}
+                                            </select>
+											<br>
+         <input type="text"  class="form-control" placeholder="Discription" name="discription" required="" autofocus=""> 
+		 <br>
+	   
+         <input type="number"  class="form-control" placeholder="Amout" name="amout" required="" autofocus=""> <br>
+		 
+        
+        
+		
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+      </form>
+          </div>
+          <div class="col-lg-7">
+            <h2>Heading</h2>
+			<br>
+            <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  
+                  <th>category</th>
+                  
+                  <th>amout</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  {% for c in cat %}
+                  <td>{{ c }}</td>
+				  {% endfor %}
+				  
+				  {% for a in amout %}
+                  <td>{{ a }}</td>
+				  {% endfor %}
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+          
+          
+        </div>
+
+</div>
+
+    
+
+ 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+    
+
+</body>
+
+</html>
+
+
+
+
+

@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+<h1>Register</h1>
+{% from "formhelper.html" import render_field %}
+<form class="form-signin" method="POST" action="/register">
+<br><br>
+        {% include "flash.html" %}
+       <label  class="sr-only">User Name</label>
+         <input type="text"  class="form-control" placeholder="Enter UserName" name="username" required="" autofocus=""> 
+		 <br>
+	   <label  class="sr-only">Name</label>
+         <input type="text"  class="form-control" placeholder="Enter Name" name="name" required="" autofocus=""> <br>
+		 
+        <label  class="sr-only">Password</label>
+        <input type="password"  class="form-control" placeholder="Password" name="password" required=""> <br>
+		
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+
+{%endblock%}

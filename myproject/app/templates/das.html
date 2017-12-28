@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Expenditre</title>
+
+    
+  
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+ <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Expenditure</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+            <a class="nav-link" href="/expence">Add Expence <span class="sr-only">(current)</span></a>
+          </li>
+         <li class="nav-item active">
+            <a class="nav-link" href="/addcat">Add Category<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Daily View</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="#">Monthly View</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Yearly View</a>
+          </li> 
+        </ul>
+        
+          
+		  
+          <a class="btn btn-outline-success my-2 my-sm-0" href="/login" role="button">Logout</a>
+		 
+        
+      </div>
+    </nav>
+	<div class= container>
+	<br>
+<br><br><br>
+
+<div class="row">
+<div class="col-lg-5">
+            <h2>Add Your Expence Category</h2>
+            <form class="form-signin" method="POST" action="/register">
+<br>
+        
+       
+         <input type="String"  class="form-control" placeholder="Enter Category" name="cat" required="" autofocus=""> 
+		
+         <br>
+		
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+      </form>
+          </div>
+		  <div class="col-lg-1">
+		  </div>
+          <div class="col-lg-5">
+            <h2></h2>
+			<br>
+            <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Categoris</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,001</td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+          
+          
+        </div>
+
+</div>
+
+    
+
+ 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+    
+
+</body>
+
+</html>
+
+
+
+
+
